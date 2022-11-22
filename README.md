@@ -13,6 +13,7 @@ tx_data = "[{\"age\": 42}]"
 create_database(config)
 transact(config, tx_data)
 q = "[:find ?a . :where [?e :age ?a]]"
+query(q, config)  # 42
 
 delete_database(config)
 ~~~
